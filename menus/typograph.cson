@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    { 'label': 'Convert typographEn', 'command': 'typograph:convertEn' }
+    { 'label': 'Convert typographRu', 'command': 'typograph:convertRu' }
+    { 'label': 'Convert typographEn Tags', 'command': 'typograph:convertEnWithTags' }
+    { 'label': 'Convert typographRu Tags', 'command': 'typograph:convertRuWithTags' }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Typograph'
+      'submenu': [
+        { 'label': 'ConvertEn', 'command': 'typograph:convertEn' }
+        { 'label': 'ConvertRu', 'command': 'typograph:convertRu' }
+        { 'label': 'ConvertEn with tags(p,br)', 'command': 'typograph:convertEnWithTags' }
+        { 'label': 'ConvertRu with tags(p,br)', 'command': 'typograph:convertRuWithTags' }
+      ]
+    ]
+  }
+]
