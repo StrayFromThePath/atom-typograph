@@ -1,14 +1,10 @@
 {
   "name": "typograph",
   "main": "./lib/typograph",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Typograph for Atom: typographing text using typograf(npm package).",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
-    "atom-workspace": "typograph:convertEn",
-    "atom-workspace": "typograph:convertRu",
-    "atom-workspace": "typograph:convertEnWithTags",
     "atom-workspace": "typograph:convertRuWithTags"
   },
   "repository": "https://github.com/StrayFromThePath/atom-typograph",
