@@ -7,9 +7,13 @@ class Typograph
     if editor = atom.workspace.getActiveTextEditor()
       selection = editor.getSelectedText()
       Typograf = require 'typograf'
-      tp = new Typograf(lang: lang, mode: 'name')
+      tp = new Typograf(
+        locale: [lang, lang],
+        htmlEntity: {type: 'name'}
+      )
       if tags
-        tp.enable('common/html/pbr');
+        tp.enableRule('common/html/p');
+        tp.enableRule('common/html/nbr');
       editor.insertText(tp.execute(selection))
 
 module.exports =
@@ -39,7 +43,7 @@ module.exports =
     langEn = new Typograph
     langEn.convert('en')
 
-# Typography for Russian language without html-tags 
+# Typography for Russian language without html-tags
   convertRuWithTags: ->
     langRu = new Typograph
     langRu.convert('ru',true)
